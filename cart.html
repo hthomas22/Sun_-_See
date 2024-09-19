@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/cart.js" defer></script> <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>Company Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart-icon.png" alt="Cart" style="width: 24px; height: 24px;">
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p id="empty-cart" style="display: none;">Your shopping cart is empty.</p>
+    </main>
+
+    <footer>
+        <div class="contact-details">
+            <p>Contact us at: example@company.com | 123-456-7890</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping Costs</a></li>
+                <li><a href="#">Tracking</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load cart items from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cartItems.length > 0) {
+            const cartItemsDiv = document.getElementById('cart-items');
+            cartItems.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItemsDiv.appendChild(itemDiv);
+            });
+        } else {
+            document.getElementById('empty-cart').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
