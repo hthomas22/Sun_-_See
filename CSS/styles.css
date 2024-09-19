@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #E0F7FA; /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* Flexbox layout for the body */
+    flex-direction: column;  /* Column direction to stack header, main, and footer */
+    min-height: 100vh;       /* Minimum height of the body to fill the viewport */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #FFAB91, #FF8A65); /* Sunset colors */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive; /* Cursive font for the header */
+    font-size: 24px;
+
+    
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    background-color: #0288D1; /* Beach blue */
+    margin: 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav ul li {
+    margin: 10px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive; /* Cursive font */
+    font-size: 18px;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;                 /* Main section takes up remaining space */
+    margin: 20px auto;       /* Center content on larger screens */
+    padding: 20px;
+    background: #ffffff;     /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;       /* Limit width for readability */
+}
+
+/* Footer Styles */
+footer {
+    background: #0288D1; /* Beach blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto; /* Push footer to bottom if content is short */
+    width: 100%;
+}
+
+footer .contact-details,
+footer .footer-links {
+    max-width: 600px; /* Limit the width */
+    margin: auto;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .product-card {
+        flex: 1 1 100%; /* Full width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 20px; /* Smaller header font for mobile */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust nav font size */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #FFF3E0; /* Light sunset color */
+    border: 1px solid #FFAB91;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+    font-family: 'Pacifico', cursive; /* Cursive font */
+}
+
+.product-image {
+    background: #B2EBF2; /* Placeholder color */
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    line-height: 100px;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
+    margin-left: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Additional Styles */
+main {
+    padding-bottom: 40px; /* Extra space for footer */
+}
